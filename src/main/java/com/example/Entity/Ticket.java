@@ -2,10 +2,7 @@ package com.example.Entity;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @AllArgsConstructor
@@ -17,5 +14,11 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    
+    @ManyToOne
+    Flight flight_id;
+    @OneToOne
+    Passenger passenger_id;
+    Status status;
+
+    Details departure_date;
 }
