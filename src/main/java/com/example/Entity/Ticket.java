@@ -1,5 +1,8 @@
 package com.example.Entity;
 
+import com.example.Enums.State;
+import com.example.Enums.Status;
+import com.example.Enums.TicketType;
 import lombok.*;
 
 import javax.persistence.*;
@@ -19,6 +22,7 @@ public class Ticket {
     @OneToOne
     Passenger passenger_id;
     Status status;
-
+    State state;
+    TicketType ticketType;
     Details departure_date;
 }
