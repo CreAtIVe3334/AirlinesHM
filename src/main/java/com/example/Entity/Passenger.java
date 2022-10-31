@@ -3,6 +3,7 @@ package com.example.Entity;
 import lombok.*;
 
 import javax.persistence.*;
+import java.math.BigDecimal;
 
 @Entity
 @AllArgsConstructor
@@ -20,6 +21,7 @@ public class Passenger {
     private String surname;
     private String phone;
     private String email;
+    private BigDecimal money;
     @Embedded
     private Address address;
 }

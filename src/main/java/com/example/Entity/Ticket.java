@@ -25,5 +25,6 @@ public class Ticket {
     Status status;
     State state;
     TicketType ticketType;
-    Details departure_date;
+    @Embedded
+    Details details;
 }
