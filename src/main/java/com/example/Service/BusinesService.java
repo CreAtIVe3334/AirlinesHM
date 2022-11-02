@@ -32,8 +32,6 @@ public class BusinesService {
         else {
             throw new EnoughMoney("Enough your money");
         }
-
-
         return  buyed;
     }
 }

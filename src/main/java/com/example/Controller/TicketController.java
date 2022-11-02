@@ -8,8 +8,5 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/buy/{ticketId}")
 public class TicketController {
-    @PostMapping
-    public ResponseEntity<> buyTicket(@PathVariable Integer ticketId){
-        Ticket ticket = findById()
-    }
+
 }

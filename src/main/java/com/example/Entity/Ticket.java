@@ -18,9 +18,10 @@ public class Ticket {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     Flight flight_id;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "passenger_id", referencedColumnName = "id")
     Passenger passenger_id;
     Status status;
     State state;
