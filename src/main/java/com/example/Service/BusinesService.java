@@ -22,7 +22,7 @@ public class BusinesService {
         boolean buyed = false;
         Ticket ticket = ticketInter.findById(ticketId).get();
         Passenger passenger = passengerInter.findById(passengerId).get();
-        if (passenger.getMoney().compareTo(ticket.getDetails().getPrice())>=0){
+        if (passenger.getMoney().compareTo(ticket.getDetails().getPrice())>=ticket.getPrice()){
             passenger.setMoney(passenger.getMoney().subtract(ticket.getDetails().getPrice()));
             ticket.getDetails().setAvailableSeats(ticket.getDetails().getAvailableSeats()-1);
             ticketInter.save(ticket);
